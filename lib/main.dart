@@ -17,6 +17,7 @@ void main() async {
     GoRouter.setUrlPathStrategy(UrlPathStrategy.path);
 
     // Wait for repository to be created before running App!!
+    // Asynchronous initialization but synchronous usage afterwards
     final LocalCartRepository = await SembastCartRepository.makeDefault();
     // * Entry point of the app
     runApp(ProviderScope(
